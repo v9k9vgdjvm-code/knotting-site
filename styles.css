@@ -49,6 +49,28 @@ main {
   text-decoration: none;
 }
 
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.nav-link {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 15px;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+  color: var(--accent);
+}
+
 .mark {
   display: grid;
   width: 34px;
@@ -116,8 +138,50 @@ footer {
   text-align: center;
 }
 
+.contact-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contact-card a {
+  flex: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  background: var(--accent);
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+details + details { border-top: 1px solid var(--line); }
+
+details { padding: 20px 0; }
+
+details:first-of-type { padding-top: 4px; }
+details:last-of-type { padding-bottom: 4px; }
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style-position: outside;
+}
+
+details p, details ol, details ul {
+  margin: 12px 0 0 20px;
+  color: var(--muted);
+}
+
+.note {
+  border-left: 4px solid var(--accent);
+  padding-left: 16px;
+  color: var(--muted);
+}
+
 @media (max-width: 560px) {
   main { padding-top: 28px; }
   header { margin-top: 48px; }
   section { padding: 24px 22px; }
+  .contact-card { align-items: flex-start; flex-direction: column; }
 }
